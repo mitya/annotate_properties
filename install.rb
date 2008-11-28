@@ -1,6 +1,6 @@
 require 'fileutils'
 
-initializer = File.dirname(__FILE__) + '/../../../config/initializers/annotate_properties.rb'
+initializer = File.expand_path(File.dirname(__FILE__) + '/../../../config/initializers/annotate_properties.rb')
 
 if File.exists?(initializer)
   puts "AnnotateProperties initializer already exists."

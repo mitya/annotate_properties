@@ -3,7 +3,7 @@ module AnnotateProperties
   
   def annotate(model_file)
     table = File.basename(model_file, '.rb').tableize
-    print "Annotating %-30s" % "#{table}..."
+    print "Annotating %-32s" % "#{table}..."
     annotation = build_annotation(table)
     write_annotation(table.classify, model_file, annotation)
     puts ' done'
